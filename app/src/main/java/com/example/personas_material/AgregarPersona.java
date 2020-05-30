@@ -24,6 +24,8 @@ public class AgregarPersona extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar_persona);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         nombre = findViewById(R.id.txtNombre);
         cedula = findViewById(R.id.txtCedula);
         apellido = findViewById(R.id.txtApellido);
@@ -73,7 +75,7 @@ public class AgregarPersona extends AppCompatActivity {
     }
 
     public void onBackPressed(){
-        finish();
+        //finish();
         Intent i = new Intent(AgregarPersona.this, MainActivity.class);
         startActivity(i);
     }

@@ -17,7 +17,7 @@ import android.view.MenuItem;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdaptadorPersona.OnPersonaClickListener{
 
 
     @Override
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 
         FloatingActionButton fab;
         RecyclerView lstPersonas;
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         lstPersonas = findViewById(R.id.lstPersonas);
         personas = Datos.obtener();
         llm = new LinearLayoutManager(this);
-        adapter = new AdaptadorPersona(personas);
+        adapter = new AdaptadorPersona(personas, this);
 
 
         llm.setOrientation(RecyclerView.VERTICAL);
@@ -47,11 +48,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void agregar(View v){
-        Intent i;
-        i = new Intent(MainActivity.this, AgregarPersona.class);
-        startActivity(i);
-        finish();
+        Intent intent;
+        intent = new Intent(MainActivity.this, AgregarPersona.class);
+        startActivity(intent);
+       // finish();
 
     }
 
+    @Override
+    public void onPersonaClick(Persona p) {
+        Intent intent;
+        Bundle bundle;
+
+        bundle = new Bundle();
+        bundle.putString("cedula",p.getCedula());
+        bundle.putString("nombre",p.getCedula());
+        bundle.putString("apellido",p.getApellido());
+        bundle.putInt("foto",p.getFoto());
+
+        intent = new Intent(MainActivity.this, DetallePersona.class);
+        intent.putExtra("datos",bundle);
+        startActivity(intent);
+       // finish();
+    }
 }
