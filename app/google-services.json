@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "431218699570",
+    "firebase_url": "https://personasmaterial-baedf.firebaseio.com",
+    "project_id": "personasmaterial-baedf",
+    "storage_bucket": "personasmaterial-baedf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:431218699570:android:1208910141a0f202ccbb2b",
+        "android_client_info": {
+          "package_name": "com.example.personas_material"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "431218699570-nbir1hvhs7glpuc72d8dofgp5dpltrf5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.personas_material",
+            "certificate_hash": "d85d0cf4910b270fd56e4aba8fc210bd6327d1dd"
+          }
+        },
+        {
+          "client_id": "431218699570-olg9h3jhldbual4v414bd4vffc3hsr3a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByUfYd1i4bkbzXxPVr-PyJodfPBoOZHtU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "431218699570-olg9h3jhldbual4v414bd4vffc3hsr3a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
