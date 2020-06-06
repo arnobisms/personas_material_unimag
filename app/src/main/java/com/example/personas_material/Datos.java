@@ -20,6 +20,10 @@ public class Datos {
        databaseReference.child(db).child(p.getId()).setValue(p);
     }
 
+    public static void setPersonas(ArrayList<Persona> personas){
+        personas = personas;
+    }
+
     public static ArrayList<Persona> obtener(){
         return personas;
     }
